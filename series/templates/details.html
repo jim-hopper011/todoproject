@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+{% block body %}
+<div class="container">
+    <div class="row">
+        <div class="col-md-6">
+            <img src="{{series.simg.url}}" alt="" width="300px" height="300px">
+            {{series.sname}}
+        </div>
+        <div class="col-md-6">
+            <a href="{% url 'serieslist:update' series.id %}" class="btn btn-warning">Update</a>
+            <a href="{% url 'serieslist:delete' series.id %}" class="btn btn-danger">Delete</a>
+        </div>
+    </div>
+</div>
+{% endblock %}
